@@ -71,6 +71,8 @@ select option{
 .section_ImgBox{
     float: right;
     margin-left: 40px;
+    position: relative;
+    z-index: 1;
 }
 
 .title-medium{
@@ -82,7 +84,7 @@ select option{
   font-style: normal;;
 }
 
-.section_content{
+.section_content2{
     display: flex;
     align-items: center;
     margin-top: 100px;
@@ -120,9 +122,10 @@ select option{
   height: 400px;
   background: purple;  
   border-radius: 50%;
-  right: 20%;
+  right: 45%;
   z-index: -1;
   filter: blur(50px);
+  top: 10px;
 }
 
 .page2{
@@ -219,11 +222,11 @@ select option{
 }
 
 .integrations{
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
+    margin-left: 30px;
+    margin-top: 200px;
     z-index: 1;
 }
+
 
 .copy{
     color: azure;
@@ -241,29 +244,33 @@ select option{
     margin-top: 20px;
     height: 500px;
     background: #1f1f4c;
-    border-radius: 15px;  
-    display: grid; 
-    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 10% 10% 10% 10% 10% 10% 5%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    border-radius: 15px; 
+    display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 .Title_card1{
-    padding-top: 15px;
+    padding-top: 140px;
+    display: flex;
     font-weight: 600;
-    font-size: 30px; 
-    left: 10;
-    text-align: left;
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 8;
-    grid-row: 2;
+    font-size: 40px;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 20px;
+    flex-grow: 1;
+    position: absolute;
     z-index: 1;
+    width: 400px;
+    left: 0;
 }
 
 .ImgBox_card_img4{
-    display: grid;
-    grid-row-start: 2;
-    grid-column-start: 6;
+    width: 85%;
+    height: 100%;
+    position: relative;
+    left: 245px;
+    padding-top: 100px;
 }
 
 .subTitle1{
@@ -273,10 +280,10 @@ select option{
 }
 
 .integrations2{
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row: 5;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
 }
 
 .card4{
@@ -286,6 +293,7 @@ select option{
     position: relative;
     border-radius: 15px;
     height: 525px;
+    overflow: hidden;
 }
 
 .Title_card3{
@@ -315,6 +323,7 @@ select option{
     margin-top: 15px;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .ImgBox_card_img5  img{
@@ -583,3 +592,129 @@ select option{
     border: none;
     display: inline-block ;
 }
+
+.underground_text{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+   width: 100%;
+   line-height: 40px;
+}
+
+.Footer_card{
+    color: #5a5959;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300; 
+    text-align: left;
+}
+
+.Footer_card.c1{
+    color: white;
+}
+
+.final_page{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    position: absolute;
+    margin-right: 800px;
+    margin-top: 550px;
+    
+}
+
+
+
+@media(max-width:1200px){
+    .imgright{
+        display: none;
+    }
+    .imgleft{
+        display: none;
+    }
+
+    .header{
+        display: none;
+    }
+
+    .rowCards.colomn{
+        grid-template-columns: 1fr;
+    }
+
+    .card.card1{
+        margin-bottom: 30px;
+    }
+    .section_content{
+        flex-direction: column;
+    }
+
+    .page2{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .page3{
+        margin-top: 50px;
+    }
+    
+    .ImgBox_card_img4{
+       left: 0;
+        width: 100%;
+        padding-top: 140px;
+    }
+
+    .card6{
+        flex-direction: column;
+    }
+
+    .card_3{
+        flex-direction: column;
+    }
+
+    .card_5{
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .ImgBox_card_img5{
+        width: auto;
+    }
+
+    .Title6{
+        font-size: 25px;
+    }
+
+    .subTitle6{
+        font-size: 15px;
+    }
+
+    .card61{
+        overflow: hidden;
+    }
+
+    .Title_card1{
+        padding-top: 15px;
+    }
+    
+    .ImgBox_card_img4 img{
+        width: 100%;
+    }
+
+    .card3{
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .section_content2{
+        flex-direction: column;
+    }
+
+    .underground_text{
+        flex-direction: column;
+    }
+
+    .final_page{
+        
+    }
+} 
